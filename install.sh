@@ -10,6 +10,7 @@ cd /tmp/$REPO
 docker build . -t ossec
 
 # 3. Create container
+docker rm -f ossec
 docker create -p 81:80 --name "ossec" ossec
 
 # 4. Launch container
