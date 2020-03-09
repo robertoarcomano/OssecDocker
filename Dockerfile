@@ -18,7 +18,6 @@ RUN cd /tmp && ./extract_ossec.sh && ./expect_ossec.exp
 RUN cd /tmp && ./extract_web_ui.sh && ./expect_web_ui.exp
 COPY ossec-wui.conf /etc/apache2/sites-enabled/
 RUN a2enmod rewrite
-RUN service apache2 start
 RUN update-rc.d apache2 enable
 RUN /var/ossec/bin/ossec-control enable database
 COPY start_script.sh /root/start_script.sh
