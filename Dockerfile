@@ -1,7 +1,7 @@
 # Dockerfile ubuntu example
 
 # Create from ubuntu
-FROM rastasheep/ubuntu-sshd
+FROM ubuntu
 
 # Copy useful script
 COPY tzdata.sh /tmp
@@ -12,7 +12,8 @@ COPY expect_web_ui.exp /tmp
 
 RUN /tmp/tzdata.sh
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get install -y libpq-dev libssl1.1
-RUN apt-get update && apt-get install -y gcc build-essential vim unzip php php-cli php-common libapache2-mod-php apache2-utils sendmail inotify-tools net-tools git expect
+RUN apt-get update && apt-get install -y gcc build-essential vim unzip php php-cli php-common libapache2-mod-php apache2-utils \
+    sendmail inotify-tools net-tools git expect wget openssh-server
 RUN apt install -y php php-cli php-common libapache2-mod-php apache2-utils sendmail inotify-tools
 RUN cd /tmp && ./extract_ossec.sh && ./expect_ossec.exp
 RUN cd /tmp && ./extract_web_ui.sh && ./expect_web_ui.exp
