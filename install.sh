@@ -3,8 +3,8 @@
 REPO=OssecDocker
 
 # 1. Download Repository
-git clone https://github.com/robertoarcomano/$REPO.git /tmp/$REPO
-cd /tmp/$REPO
+#git clone https://github.com/robertoarcomano/$REPO.git /tmp/$REPO
+#cd /tmp/$REPO
 
 # 2. Build Image ossec
 docker build . -t ossec
@@ -17,6 +17,6 @@ docker create -p 49007:80 --name "ossec" ossec
 docker start ossec
 
 # 5. Delete /tmp/$REPO
-cd
-rm -rf /tmp/$REPO
+#cd
+#rm -rf /tmp/$REPO
 
