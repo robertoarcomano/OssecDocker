@@ -122,14 +122,7 @@ expect -exact "\r
 \r
    - Do you want to enable the firewall-drop response? (y/n) \[y\]: "
 send -- "\r"
-expect -exact "\r
-\r
-     - firewall-drop enabled (local) for levels >= 6\r
-\r
-   - Default white list for the active response:\r
-      - 89.101.160.4\r
-      - 89.101.160.5\r
-\r
+expect -exact "
    - Do you want to add more IPs to the white list? (y/n)? \[n\]: "
 send -- "y\r"
 expect -exact "y\r
