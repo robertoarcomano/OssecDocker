@@ -57,12 +57,8 @@ send -- "\r"
 expect -exact "\r
 \r
 1- What kind of installation do you want (server, agent, local, hybrid or help)? "
-send -- "local\r"
-expect -exact "- Local installation chosen.\r
-\r
-2- Setting up the installation environment.\r
-\r
- - Choose where to install the OSSEC HIDS \[/var/ossec\]: "
+send -- "server\r"
+expect -exact "Choose where to install the OSSEC HIDS \[/var/ossec\]: "
 send -- "\r"
 expect -exact "\r
 \r
