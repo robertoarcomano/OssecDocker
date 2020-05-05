@@ -57,10 +57,10 @@ send -- "\r"
 expect -exact "\r
 \r
 1- What kind of installation do you want (server, agent, local, hybrid or help)? "
-send -- "server\r"
-expect -exact "server\r
+send -- "local\r"
+expect -exact "local\r
 \r
-  - Server installation chosen.\r
+  - Local installation chosen.\r
 \r
 2- Setting up the installation environment.\r
 \r
