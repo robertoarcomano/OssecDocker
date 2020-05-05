@@ -60,7 +60,7 @@ expect -exact "\r
 send -- "server\r"
 expect -exact "server\r
 \r
-  - Local installation chosen.\r
+  - Server installation chosen.\r
 \r
 2- Setting up the installation environment.\r
 \r
