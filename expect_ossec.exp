@@ -152,31 +152,9 @@ expect -exact "\r
                             \r
 "
 send -- "\r"
-expect -exact "\r
-\r
-5- Installing the system\r
- - Running the Makefile\r
-    \[34mCC\[0m \[33mexternal/cJSON/cJSON.o\[0m\r
-    \[34;1mLINK\[0m \[37;1mlibcJSON.a\[0m\r
-    \[34;1mRANLIB\[0m \[37;1mlibcJSON.a\[0m\r
-cd external/zlib-1.2.11/ && ./configure && make libz.a\r
-Checking for gcc...\r
-Checking for shared library support...\r
-Building shared library libz.so.1.2.11 with gcc.\r
-Checking for size_t... Yes.\r
-Checking for off64_t... Yes.\r
-Checking for fseeko... Yes.\r
-Checking for strerror... Yes.\r
-Checking for unistd.h... Yes.\r
-Checking for stdarg.h... Yes.\r
-Checking whether to use vs\[n\]printf() or s\[n\]printf()... using vs\[n\]printf().\r
-Checking for vsnprintf() in stdio.h... Yes.\r
-Checking for return value of vsnprintf()... Yes.\r
-Checking for attribute(visibility) support... Yes.\r
-make\[1\]: Entering directory '/tmp/ossec-hids-3.1.0/src/external/zlib-1.2.11'\r
-gcc -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o adler32.o adler32.c\r
-gcc -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o crc32.o crc32.c\r
-gcc -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o deflate.o deflate.c\r
+expect -exact "
+    ---  Press ENTER to finish (maybe more information below). ---\r
+    \r
 "
-send -- ""
+send -- "\r"
 expect eof
