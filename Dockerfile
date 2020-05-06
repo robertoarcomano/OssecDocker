@@ -6,7 +6,7 @@ FROM ubuntu
 # Copy useful script
 COPY tzdata.sh /tmp
 COPY extract_ossec.sh /tmp
-COPY expect_ossec-.exp /tmp
+COPY expect_ossec.exp /tmp
 COPY extract_web_ui.sh /tmp
 COPY expect_web_ui.exp /tmp
 
